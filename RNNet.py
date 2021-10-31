@@ -34,7 +34,7 @@ class CTRNN(nn.Module):
         self.input2h = nn.Linear(input_size, hidden_size)
         self.h2h = nn.Linear(hidden_size, hidden_size)
         self.noise = noise
-        self.device = device
+        self.device = kwargs["device"]
 
     def init_hidden(self, input_shape):
         batch_size = input_shape[1]
